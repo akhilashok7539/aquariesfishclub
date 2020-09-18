@@ -1,0 +1,21 @@
+::ng-deep .mat-dialog-container{
+	margin-top: 40px !important ;
+}
+textarea{
+	margin: 0px auto;
+    display: block;
+    border: 1px solid lightgreen;
+    height: 88px;
+	outline: none;
+	height: 246px;
+}
+button{
+	margin-top: 13px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+h1{
+	text-align: center;
+}

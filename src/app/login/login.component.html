@@ -1,0 +1,58 @@
+<app-navigation></app-navigation>
+
+<div class="page-wrapper" style="margin-top: 62px; ">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-7">
+
+            </div>
+            <div class="col-sm-5">
+                <form [formGroup]="loginForm">
+                    <div class="card">
+                        <div class="card-title">
+                            <h4>LOGIN</h4>
+                            <p>Welcome back! Please login to your account.</p>
+                            <!-- <input type="text" matInput placeholder="Phone Number"> -->
+                            <mat-form-field class="example-full-width" style="margin-top: 20px;">
+                                <input [(ngModel)]="loginmodel.email" formControlName="email" matInput
+                                    placeholder="Email ID" type="text">
+                                <button mat-icon-button matSuffix>
+                                    <mat-icon></mat-icon>
+                                </button>
+                                <mat-error *ngIf="loginForm.get('email').hasError('required')">
+                                   Email Id is Required!
+                                </mat-error>
+                          
+                            </mat-form-field>
+
+                            <mat-form-field class="example-full-width">
+                                <input [type]="hide ? 'password' : 'text'" [(ngModel)]="loginmodel.password"
+                                    formControlName="password" matInput placeholder="Password" type="password">
+                                <button mat-icon-button matSuffix (click)="hide = !hide"
+                                    [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                </button>
+                                <mat-error *ngIf="loginForm.get('password').hasError('required')">
+                                   Password is Required!
+                                </mat-error>
+
+                            </mat-form-field>
+
+
+                            <div class="row" style="    margin: 0px;">
+                                <button class="loginbtn" (click)="login()">Login</button> &nbsp; &nbsp;
+                                <button class="signupbtn" (click)=register()>Sign up</button>
+
+                            </div>
+
+
+                            <p style="margin-top: 50px;cursor: pointer;" routerLink="/adminlogin">Admin Login</p>
+                            <p style="margin-top: 50px;">Term of use. Privacy policy</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>

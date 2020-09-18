@@ -1,0 +1,22 @@
+<app-navigation></app-navigation>
+<div class="page-wrapper">
+    <div class="container">
+        <div class="row" style="   margin-top: 20px;">
+            <h6 style="color: #8A8A8A;">My Exams</h6>
+            <button class="btn btn-success" (click)="add()"> Add Exams</button>
+            
+        </div>
+        
+        <div class="row" >
+            <div class="col-sm-3" *ngFor="let results of results">
+                <mat-card>
+                    <img src="./assets/img/Instiman-349x500.png" alt="">
+                    <h5>{{results.examName}}</h5>
+                    <!-- <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, et dolore magna aliquyam erat, sed diam voluptua.</p> -->
+                </mat-card>
+            </div>
+        </div>
+        
+ 
+    </div>
+</div>

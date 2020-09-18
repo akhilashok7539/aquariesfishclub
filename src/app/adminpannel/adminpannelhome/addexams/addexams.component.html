@@ -1,0 +1,29 @@
+<app-navigation></app-navigation>
+<app-sidebar></app-sidebar>
+<div class="page-wrapper">
+    <h5>Add Exams</h5>
+    <form [formGroup]="examForm">
+    <div class="row">
+      
+            <div class="col-sm-6 offset-3 ">
+                <label for=""> Exam Name</label>
+                <input  [ngClass]="{ 'is-invalid': submitted && f.examName.errors }" type="text" class="form-control" [(ngModel)]="examModel.examName" formControlName="examName" placeholder="Enter the exam name">
+                <div *ngIf="submitted && f.examName.errors" class="invalid-feedback">
+                    <div *ngIf="f.examName.errors.required">Exam name is required</div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 offset-3 ">
+                <label for=""> Description</label>
+                <input [ngClass]="{ 'is-invalid': submitted && f.description.errors }" type="text" class="form-control" placeholder="Enter the exams description" [(ngModel)]="examModel.description" formControlName="description">
+                <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
+                    <div *ngIf="f.description.errors.required">Description is required</div>
+                </div>
+            </div>
+            <div class="col-sm-6 offset-3 ">
+                <button class="btn btn-success" (click)="create()">Create</button>
+            </div>
+
+    </div>
+</form>
+</div>

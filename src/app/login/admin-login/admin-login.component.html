@@ -1,0 +1,58 @@
+<app-navigation></app-navigation>
+
+<div class="page-wrapper" style="margin-top: 62px; ">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-7">
+
+            </div>
+            <div class="col-sm-5">
+                <form [formGroup]="loginForm">
+                    <div class="card">
+                        <div class="card-title">
+                            <h4>ADMIN LOGIN</h4>
+                            <p>Welcome back! Please login to your account.</p>
+                            <!-- <input type="text" matInput placeholder="Phone Number"> -->
+                            <mat-form-field class="example-full-width" style="margin-top: 20px;">
+                                <input [(ngModel)]="loginmodel.mobNo" formControlName="mobNo" matInput
+                                    placeholder="Mobile Number" type="number">
+                                <button mat-icon-button matSuffix>
+                                    <mat-icon></mat-icon>
+                                </button>
+                                <mat-error *ngIf="loginForm.get('mobNo').hasError('required')">
+                                    Mobile Number is Required!
+                                </mat-error>
+                                <mat-error *ngIf="loginForm.get('mobNo').hasError('pattern')">
+                                    Enter a valid mobile number
+                                </mat-error>
+                            </mat-form-field>
+
+                            <mat-form-field class="example-full-width">
+                                <input [type]="hide ? 'password' : 'text'" [(ngModel)]="loginmodel.password"
+                                    formControlName="password" matInput placeholder="Password" type="password">
+                                <button mat-icon-button matSuffix (click)="hide = !hide"
+                                    [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                </button>
+                                <mat-error *ngIf="loginForm.get('password').hasError('required')">
+                                    password is Required!
+                                </mat-error>
+
+                            </mat-form-field>
+
+
+                            <div class="row" style="    margin: 0px;">
+                                <button class="loginbtn" (click)="login()">Login</button> &nbsp; &nbsp;
+
+                            </div>
+
+
+                            <p style="margin-top: 50px;">Term of use. Privacy policy</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+  <div class="container-fluid">
+    <img src="./assets/images/banner.png" style="width: 85px;" routerLink="/Home">
+    <!-- <p>LOGO</p> -->
+    <a class="navbar-brand" routerLink="/Home"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item ">
+          <a class="nav-link" routerLink="/Home" routerLinkActive="active">Home</a>
+        </li>
+
+        <li class="nav-item" *ngIf="isUser == true">
+          <a class="nav-link" routerLink="/chooseExams" routerLinkActive="active">Exams</a>
+        </li>
+        <li class="nav-item" *ngIf="isAdmin == true">
+          <a class="nav-link" routerLink="/adminpannel" routerLinkActive="active">Admin pannel</a>
+        </li>
+        <!-- <li class="nav-item" >
+            <a class="nav-link"  >Akhil Ashok</a>
+         </li> -->
+        <li class="nav-item" *ngIf="!isLogin">
+          <a class="nav-link" routerLink="/services" routerLinkActive="active"> Services</a>
+        </li>
+
+      </ul>
+      <ul class="nav user-menu float-right" *ngIf="isLogin">
+
+
+        <li class="nav-item dropdown has-arrow" (click)="logout()" style="top: 0px;cursor: pointer;
+        font-size: 13px;">
+          <i class="fa fa-sign-out"></i> Logout
+        </li>
+      </ul>
+
+
+
+
+
+    </div>
+  </div>
+</nav>

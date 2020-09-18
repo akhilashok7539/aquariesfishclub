@@ -1,0 +1,40 @@
+<app-navigation></app-navigation>
+
+
+
+<div class="row">
+    <h5>Choose your exams</h5>
+</div>
+<div class="row">
+
+<div class="col-sm-8">
+    <!-- <mat-card> -->
+
+
+        <form [formGroup]="examForm">
+            <p>Hi,{{userDetails.name}} PLease choose your examss that you want to attend!...</p>
+
+            <div class="row" style="padding: 15px;">
+                <!-- <div class="col-sm-3" > -->
+        
+        
+                <div class="radio-toolbar" *ngFor="let results of results">
+        
+                    <input formControlName="check" (change)="onChange(results.examName, $event.target.checked)" type="checkbox"
+                        id="{{results.examName}}" name="radioFruit" value="{{results.examName}}">
+                    <label for="{{results.examName}}">{{results.examName}}</label>
+        
+                    <!-- </div> -->
+        
+                </div>
+            </div>
+            <hr>
+            <button class="btn btn-primary" (click)="submit()">Submit</button>
+        </form>
+        <!-- </mat-card> -->
+</div>
+<div class="col-sm-4">
+    <img src="./assets/img/register-ill.png" alt="" style="width: 100px;">
+</div>
+
+</div>

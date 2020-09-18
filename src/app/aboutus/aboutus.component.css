@@ -1,0 +1,41 @@
+.page-wrapper{
+    padding: 73px;
+}
+
+h1{
+    font-size: 25px;
+    font-weight: bold;
+}
+p{
+    color: #FF6F69;
+
+}
+li{
+    color: #FF6F69;
+}
+img{
+    width: 300px;
+}
+.sideimg{
+    margin-top: -75px;
+    left: -33px;
+    position: absolute;
+    width: 127px;
+    height: 116px;
+}
+@media (max-width: 968px)
+{
+    img{
+        width: 240px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+
+    }
+    .page-wrapper{
+        padding: 33px;
+    }
+    .sideimg{
+        display: none;
+    }
+}

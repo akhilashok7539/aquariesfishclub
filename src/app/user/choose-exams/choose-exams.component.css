@@ -1,0 +1,24 @@
+.page-wrapper
+{
+    margin-top: 70px;
+    height: auto;
+}
+
+img{
+    height: 59px;
+    border-radius: 129px;
+    width: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+h5{
+    text-align: center;
+}
+.btn{
+    margin-left: auto;
+}
+::ng-deep .mat-card{
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
