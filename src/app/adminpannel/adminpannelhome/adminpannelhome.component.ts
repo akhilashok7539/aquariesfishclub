@@ -27,8 +27,11 @@ export class AdminpannelhomeComponent implements OnInit {
   ngOnInit() {
   }
   book(){
-    let link = "https://api.whatsapp.com/send?phone=8086362942&text="+this.textarea;
+    let link = "https://api.whatsapp.com/send?phone=+918086362942&text="+this.textarea;
 
     window.location.assign(link);
+  }
+  close(){
+    this.dialog.closeAll();
   }
 }
