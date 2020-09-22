@@ -14,6 +14,7 @@ export class AdminpannelhomeComponent implements OnInit {
   name: any;
   description: any;
   textarea:any
+   messagecustom:any;
   constructor(@Inject(MAT_DIALOG_DATA) data,public dialog: MatDialog,
   private dialogRef: MatDialogRef<AdminpannelhomeComponent>) 
   { 
@@ -27,7 +28,8 @@ export class AdminpannelhomeComponent implements OnInit {
   ngOnInit() {
   }
   book(){
-    let link = "https://api.whatsapp.com/send?phone=+918086362942&text="+this.textarea;
+    this.messagecustom = "Hi Aquarius,I Need to know the details and availability of" + this.name + " & "+this.textarea;
+    let link = "https://api.whatsapp.com/send?phone=+918086362942&text="+this.messagecustom;
 
     window.location.assign(link);
   }
