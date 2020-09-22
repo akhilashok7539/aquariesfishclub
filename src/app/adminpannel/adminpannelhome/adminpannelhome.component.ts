@@ -29,7 +29,7 @@ export class AdminpannelhomeComponent implements OnInit {
   }
   book(){
     this.messagecustom = "Hi Aquarius,I Need to know the details and availability of" + this.name + " & "+this.textarea;
-    let link = "https://api.whatsapp.com/send?phone=+918086362942&text="+this.messagecustom;
+    let link = "https://api.whatsapp.com/send?phone=+918590746072&text="+this.messagecustom;
 
     window.location.assign(link);
   }
